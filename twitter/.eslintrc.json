@@ -1,0 +1,114 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "project": "tsconfig.json",
+      "tsconfigRootDir": ".",
+      "createDefaultProgram": true
+  },
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "chai-friendly", "prettier", "babel"],
+  "extends": [
+      "airbnb-typescript",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "prettier", 
+      "plugin:react-hooks/recommended"
+  ],
+  "settings": {
+      "react": {
+          "version": "detect"
+      }
+  },
+  "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+  },
+  "rules": {
+    "indent": [2, 2, { "SwitchCase": 1, "MemberExpression": "off" }],
+      "no-restricted-syntax": 0,
+      "prettier/prettier": "error",
+      "default-case": 0,
+      "import/prefer-default-export": 0,
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "**/*.test.js",
+            "**/*.test.jsx",
+            "**/*.test.ts",
+            "**/*.test.tsx",
+            "**/*.spec.js",
+            "**/*.spec.jsx",
+            "**/*.spec.ts",
+            "**/*.spec.tsx",
+            "**/setupTests.ts",
+            "stories/*.stories.tsx",
+            "stories/*.tsx",
+            "stories/*.ts"
+          ]
+        }
+      ],
+      "react/react-in-jsx-scope": 0,
+      "react/jsx-props-no-spreading": 0,
+      "react/display-name": 0,
+      "react/prop-types": 0,
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/indent": 0,
+      "@typescript-eslint/member-delimiter-style": 0,
+      "@typescript-eslint/no-explicit-any": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-use-before-define": 0,
+      "@typescript-eslint/no-unused-vars": [
+        2,
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "@typescript-eslint/method-signature-style": 1,
+      "@typescript-eslint/no-unnecessary-qualifier": 1,
+      "no-console": [
+        0,
+        {
+          "allow": ["warn", "error"]
+        }
+      ],
+      "no-underscore-dangle": ["error", { "allow": ["__component"] }],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".ts", ".tsx", ".jsx"]
+        }
+      ],
+      "func-names": [
+        "error",
+        "as-needed",
+        {
+          "generators": "as-needed"
+        }
+      ],
+      "no-unused-expressions": [
+        2,
+        { "allowShortCircuit": true, "allowTernary": true }
+      ],
+      "@typescript-eslint/no-unused-expressions": [
+        2,
+        { "allowShortCircuit": true, "allowTernary": true }
+      ]
+    },
+    "overrides": [
+      {
+        "files": ["*.spec.js"],
+        "rules": {
+          "no-unused-expressions": 0,
+          "jest/expect-expect": 0,
+          "jest/valid-expect": 0,
+          "@typescript-eslint/no-unused-expressions": 0,
+          "jest/valid-expect-in-promise": 0,
+          "prefer-destructuring": 0
+        }
+      }
+    ]
+
+}
