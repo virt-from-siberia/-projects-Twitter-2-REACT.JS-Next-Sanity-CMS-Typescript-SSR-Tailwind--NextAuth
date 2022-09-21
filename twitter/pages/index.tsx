@@ -5,6 +5,7 @@ import { Feed } from '../components/Feed'
 import { Widgets } from '../components/Widgets'
 import { fetchTweets } from '../utils/fetchTweets'
 import { Tweet } from '../typings'
+import { Toaster } from 'react-hot-toast'
 
 interface Props {
   tweets: Tweet[]
@@ -17,6 +18,7 @@ const Home = ({ tweets }: Props) => {
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Toaster />
 
       <main className='grid grid-cols-9'>
         <Sidebar />

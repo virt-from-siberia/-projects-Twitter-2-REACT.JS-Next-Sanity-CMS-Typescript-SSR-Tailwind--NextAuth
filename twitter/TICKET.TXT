@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=rCselwxbUgA&t=10707s
 
-2:23 MIN
+2:28 MIN
 
 INSTALL!
 npm install -g @sanity/cli
